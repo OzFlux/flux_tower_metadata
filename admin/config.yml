@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: ozflux/ozflux_site_information
   branch: main
 
 media_folder: "sites/images"
