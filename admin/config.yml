@@ -1,0 +1,33 @@
+local_backend: true
+
+backend:
+  name: github
+  repo: your-org/pfp_examples
+  branch: main
+
+media_folder: "sites/images"
+public_folder: "/images"
+
+collections:
+  - name: "sites"
+    label: "Flux Tower Sites"
+    folder: "sites"
+    create: true
+    extension: "yaml"
+    format: "yaml"
+    fields:
+      - {label: "Site ID / Name", name: "site_id", widget: "string"}
+      - label: "Instrument History"
+        name: "instruments"
+        widget: "list"
+        fields:
+          - {label: "Manufacturer", name: "manufacturer", widget: "string"}
+          - {label: "Model Number", name: "model", widget: "string"}
+          - {label: "Serial Number", name: "serial_number", widget: "string"}
+          - {label: "Date Installed", name: "date_installed", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false}
+          - {label: "Date Removed", name: "date_removed", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false, required: false}
+          - {label: "Height (m)", name: "height", widget: "number", value_type: "float"}
+          - label: "Tower Location / Position"
+            name: "location"
+            widget: "select"
+            options: ["North boom", "South boom", "Main mast top", "Ground enclosure"]
