@@ -1,8 +1,6 @@
-local_backend: true
-
 backend:
   name: github
-  repo: your-org/pfp_examples
+  repo: YOUR_USERNAME/flux-tower-metadata
   branch: main
 
 media_folder: "sites/images"
