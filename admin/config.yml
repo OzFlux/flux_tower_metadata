@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: YOUR_USERNAME/flux-tower-metadata
+  name: git-gateway
   branch: main
 
 media_folder: "sites/images"
